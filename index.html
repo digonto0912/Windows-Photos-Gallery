@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Photos</title>
+</head>
+
+<body>
+    <div class="photos_app">
+        <!-- TopBar Section -->
+        <div class="top_bar">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo">
+                <div>Photos</div>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="main_content">
+            <!-- SideBar section -->
+            <div class="side_bar">
+                <button onclick="toggleSideBar()">☰</button>
+                <div class="side_bar_content">
+                    <div class="side_bar_item">
+                        <img src="./img/allPhotos.png" alt="side-bar icon">
+                        <div id="galleryFileName">All Photos</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image Section -->
+            <div class="img_box">
+                <!-- Header -->
+                <div class="header">
+                    <div>
+                        <!-- Image Header -->
+                        <div class="header_title">
+                            <div id="headline">
+                                <img src="./img/allPhotos.png" alt="side-bar icon">
+                                <div>All Photos</div>
+                            </div>
+                            <div id="total_photos">10 Photos</div>
+                        </div>
+                        <!-- action buttons -->
+                        <div class="header_action">
+                            <input type="file" name="upload" id="myFileInput" style="display: none" multiple>
+                            <label for="myFileInput">
+                                <img src="./img/upload.png" alt="import" id="uploadIcon" onchange="uploadImg">
+                            </label>
+                            <img src="./img/delete.png" alt="delete" onclick="deleteSelectedImages()">
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Content -->
+                <div class="img_box_content" id="img_box_content"></div>
+            </div>
+        </div>
+
+        <!-- Image Showing In Large Size -->
+        <div id="modal">
+            <span class="close" onClick="closeImage()">&times;</span>
+            <img class="photo-page-modal-content" src="./img/no-photo.png" alt="Modal View" />
+        </div>
+    </div>
+
+
+
+    <!-- JS Script -->
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
